@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wbyit.github.io</id>
     <title>冰之翼</title>
-    <updated>2019-10-30T11:59:56.763Z</updated>
+    <updated>2019-10-30T12:01:04.605Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wbyit.github.io"/>
     <link rel="self" href="https://wbyit.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://wbyit.github.io/images/avatar.png</logo>
     <icon>https://wbyit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 冰之翼</rights>
+    <entry>
+        <title type="html"><![CDATA[Vue基础学习]]></title>
+        <id>https://wbyit.github.io/post/vue-ji-chu-xue-xi</id>
+        <link href="https://wbyit.github.io/post/vue-ji-chu-xue-xi">
+        </link>
+        <updated>2019-10-30T12:00:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="vue是什么">Vue是什么？</h2>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://wbyit.github.io/post/hello-gridea</id>
