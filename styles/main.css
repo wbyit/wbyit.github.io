@@ -1209,7 +1209,7 @@ a:hover {
 .post-section .inner {
   margin-left: auto;
   margin-right: auto;
-  max-width: 760px;
+  max-width: 1000px;
   padding-left: 18px;
   padding-right: 18px;
 }
@@ -1897,3 +1897,27 @@ mark {
   color: #855c0a;
   margin: 0 4px;
 }
+
+      .head, .info,
+      .no-cover,
+      .navigation a,
+      .footer-rss,
+      .item .item-image {
+        background-color: #66d9e8;
+      }
+
+      .item:hover h2,
+      .prev-post a:hover, .post-archives a:hover {
+        color: #66d9e8;
+      }
+
+      .tags .tag:hover {
+        border-color: #66d9e8;
+      }
+
+      .post-content a:hover {
+        color: #66d9e8;
+        border-color: #66d9e8;
+      }
+      
+    
