@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wbyit.github.io</id>
-    <title>冰之翼</title>
-    <updated>2019-10-30T12:08:26.757Z</updated>
+    <title>By</title>
+    <updated>2019-10-31T00:11:29.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wbyit.github.io"/>
     <link rel="self" href="https://wbyit.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://wbyit.github.io/images/avatar.png</logo>
     <icon>https://wbyit.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 冰之翼</rights>
+    <rights>All rights reserved 2019, By</rights>
     <entry>
         <title type="html"><![CDATA[Vue基础学习]]></title>
         <id>https://wbyit.github.io/post/vue-ji-chu-xue-xi</id>
@@ -17,7 +17,17 @@
         </link>
         <updated>2019-10-30T12:00:01.000Z</updated>
         <content type="html"><![CDATA[<h2 id="vue是什么">Vue是什么？</h2>
-<h2 id="vue环境搭建与引入方式">Vue环境搭建与引入方式</h2>
+<p>Vue是用来构建界面的一套渐进式框架<br>
+与其他重量级框架不同的是，Vue的核心库只关心视图层<br>
+Vue完全有能力驱动采用单文件组件和Vue生态系统支持的库开发的复杂单页应用。</p>
+<p>Vue的目标是通过尽可能简单的 API 实现响应的数据绑定 和 组合的视图组件。</p>
+<h2 id="起步引入vue">起步，引入Vue</h2>
+<h3 id="html页面引入方式">html页面，引入方式</h3>
+<p>可以创建一个本地的 .html 文件，然后通过如下方式引入 Vue:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;
+</code></pre>
+<h3 id="使用vue-cli">使用Vue-cli</h3>
+<p>后面会写，暂时先用上面的方式学习Vue的语法</p>
 <h2 id="声明式渲染">声明式渲染</h2>
 <h2 id="属性绑定">属性绑定</h2>
 <h2 id="条件语法">条件语法</h2>

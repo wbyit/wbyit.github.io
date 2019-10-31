@@ -2,108 +2,80 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>冰之翼</title>
+<title>Vue基础学习 | By</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://wbyit.github.io/favicon.ico?v=1572437304025">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://wbyit.github.io/favicon.ico?v=1572480687243">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 <link rel="stylesheet" href="https://wbyit.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="冰之翼 - Atom Feed" href="https://wbyit.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Vue基础学习 | By - Atom Feed" href="https://wbyit.github.io/atom.xml">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://wbyit.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://wbyit.github.io/images/avatar.png?v=1572437304025" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">冰之翼</h1>
+    <div class="site-nav no-cover">
+      <div class="head">
+  <div class="inner">
+    <a class="site-name" href="https://wbyit.github.io">
+        <span>By</span>
+    </a>
+    <label class="burger" for="burger"></label>
+    <input id="burger" type="checkbox">
+    <button class="burger">
+      <div>
+        <span></span>
+        <span></span>
       </div>
+    </button>
+    <nav class="info_nav">
       
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#vue%E6%98%AF%E4%BB%80%E4%B9%88">Vue是什么？</a></li>
-<li><a href="#vue%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F">Vue环境搭建与引入方式</a></li>
-<li><a href="#%E5%A3%B0%E6%98%8E%E5%BC%8F%E6%B8%B2%E6%9F%93">声明式渲染</a></li>
-<li><a href="#%E5%B1%9E%E6%80%A7%E7%BB%91%E5%AE%9A">属性绑定</a></li>
-<li><a href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E6%B3%95">条件语法</a></li>
-<li><a href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E6%B3%95">循环语法</a></li>
-<li><a href="#%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95">模板语法</a></li>
-<li><a href="#%E5%87%BD%E6%95%B0%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7">函数与计算属性</a></li>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A">事件绑定</a></li>
-<li><a href="#%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6%E7%BB%91%E5%AE%9A">表单控件绑定</a></li>
-<li><a href="#%E7%BB%84%E4%BB%B6">组件</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="/" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://wbyit.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Vue基础学习</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2019-10-30 / 1 min read
-        </div>
         
-        <div class="post-content yue">
-          <h2 id="vue是什么">Vue是什么？</h2>
-<h2 id="vue环境搭建与引入方式">Vue环境搭建与引入方式</h2>
+          <a href="/">首页</a>
+        
+      
+        
+          <a href="/archives">归档</a>
+        
+      
+        
+          <a href="/tags">标签</a>
+        
+      
+        
+          <a href="/post/about">关于</a>
+        
+      
+    </nav>
+  </div>
+</div>
+    </div>
+    <article role="main" class="hentry ">
+      
+      <h1 class="entry-title" itemprop="headline">Vue基础学习</h1>
+      <div class="entry-meta">
+        <time class="updated" datetime="2019-10-30 20:00:01">2019-10-30</time>
+        <span class="author vcard">
+          1 min read
+        </span>
+      </div>
+      <div class="post-content yue">
+        <h2 id="vue是什么">Vue是什么？</h2>
+<p>Vue是用来构建界面的一套渐进式框架<br>
+与其他重量级框架不同的是，Vue的核心库只关心视图层<br>
+Vue完全有能力驱动采用单文件组件和Vue生态系统支持的库开发的复杂单页应用。</p>
+<p>Vue的目标是通过尽可能简单的 API 实现响应的数据绑定 和 组合的视图组件。</p>
+<h2 id="起步引入vue">起步，引入Vue</h2>
+<h3 id="html页面引入方式">html页面，引入方式</h3>
+<p>可以创建一个本地的 .html 文件，然后通过如下方式引入 Vue:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&gt;
+</code></pre>
+<h3 id="使用vue-cli">使用Vue-cli</h3>
+<p>后面会写，暂时先用上面的方式学习Vue的语法</p>
 <h2 id="声明式渲染">声明式渲染</h2>
 <h2 id="属性绑定">属性绑定</h2>
 <h2 id="条件语法">条件语法</h2>
@@ -114,24 +86,23 @@
 <h2 id="表单控件绑定">表单控件绑定</h2>
 <h2 id="组件">组件</h2>
 
-        </div>
-
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://wbyit.github.io/tag/m_AwMAlVU">
-            <span class="flex-auto">Vue</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
+      </div>
+      <div class="entry-block">
+        <div class="entry-tags">
           
-
+            <a href="https://wbyit.github.io/tag/m_AwMAlVU">
+              Vue
+            </a>
           
         </div>
+      </div>
+    </article>
+    
+    
 
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    
+      
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
@@ -152,112 +123,50 @@
 
 </script>
 
-          
+      
 
-          
+      
+    
+
+    <footer class="footer">
+  <div class="main">
+    <a href="https://wbyit.github.io">
+      <img class="avatar" src="https://wbyit.github.io/images/avatar.png?v=1572480687243" alt="By">
+    </a>
+    <div class="footer__social">
+      
         
-
-      </div>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     </div>
+    <p class="footer__sosumi">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </p>
+    <a class="footer-rss" href="https://wbyit.github.io/atom.xml">RSS</a>
+  </div>
+</footer>
 
-    <script src="https://wbyit.github.io/media/prism.js"></script>  
+<script src="https://wbyit.github.io/media/prism.js"></script>
 <script>
-
-Prism.highlightAll()
-
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
+  Prism.highlightAll()
 </script>
-  
+
   </body>
 </html>
