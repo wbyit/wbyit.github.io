@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://wbyit.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Wby</title>
-    <updated>2019-10-31T04:10:31.696Z</updated>
+    <updated>2019-11-01T01:29:58.563Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://wbyit.github.io"/>
-    <link rel="self" href="https://wbyit.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://wbyit.github.io/images/avatar.png</logo>
-    <icon>https://wbyit.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2019, Wby</rights>
     <entry>
+        <title type="html"><![CDATA[Vue标签页组件的设计]]></title>
+        <id>http://localhost:4000/post/vue-biao-qian-ye-zu-jian-de-she-ji</id>
+        <link href="http://localhost:4000/post/vue-biao-qian-ye-zu-jian-de-she-ji">
+        </link>
+        <updated>2019-11-01T01:29:25.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Vue基础学习]]></title>
-        <id>https://wbyit.github.io/post/vue-ji-chu-xue-xi</id>
-        <link href="https://wbyit.github.io/post/vue-ji-chu-xue-xi">
+        <id>http://localhost:4000/post/vue-ji-chu-xue-xi</id>
+        <link href="http://localhost:4000/post/vue-ji-chu-xue-xi">
         </link>
         <updated>2019-10-30T12:00:01.000Z</updated>
         <content type="html"><![CDATA[<h2 id="vue是什么">Vue是什么？</h2>
