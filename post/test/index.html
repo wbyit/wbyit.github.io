@@ -34,7 +34,7 @@
     </div>
     <nav class="site-nav" id="site_nav">
       <ul>
-        <li class="nav-item nav-item-active">
+        <li class="nav-item ">
           
             
               
@@ -117,8 +117,13 @@
     <div class="main-continer">
       <div class="section-layout">
         <div class="section-layout-wrapper">
-          <div class="sidebar">
-    <div class="sidebar-wrapper">
+          
+<div class="sidebar">
+  <div class="sidebar-wrapper" id="sidebar">
+    
+    <div class="post-sidebar-body">
+      
+        <div class="sidebar-wrapper">
   <div class="sidebar-item">
     <img class="site-author-image" src="https://wbyit.github.io/images/avatar.png"/>
     <p class="site-author-name">Wby</p>
@@ -169,11 +174,31 @@
     </div>
   </div>
 </div>
+      
+    </div>
+  </div>
 </div>
+<script>
+  let sidebar = document.querySelector('#sidebar');
+  let limitTop = sidebar.offsetTop;
+  let hasFix = false;
+  window.addEventListener('scroll', function(e) {
+    if (document.body.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+</script>
           <div class="section-box">
-            <section class="section posts-expand">
-              
-  <article class="post-list-box">
+            <div class="section">
+              <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://wbyit.github.io/post/test">
@@ -212,40 +237,29 @@
     </span>
   </div>
 </header>
-    <div class="post-body">
-      
-      <!--noindex-->
-      
-      <div class="post-button text-center">
-        <a class="btn" href="https://wbyit.github.io/post/test" rel="contents">
-          阅读全文 »
-        </a>
-      </div>
-      <!--/noindex-->
-      
-    </div>
-    <footer class="post-footer">
-      <div class="post-eof"></div>
-    </footer>
-  </article>
-  
-              
-<div class="page">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-    
-    
-  </ul>
 </div>
-            </section>
+              <div class="post-body next-mk-body" id="post_body">
+                <p>测试一下</p>
+
+              </div>
+              <div class="post-footer">
+                <ul class="post-copyright">
+                  <li class="post-copyright-author">
+                    <strong>本文作者：</strong>
+                    Wby
+                  </li>
+                  <li class="post-copyright-link">
+                    <strong>本文链接：</strong>
+                    <a href="https://wbyit.github.io/post/test" title="test">https://wbyit.github.io/post/test</a>
+                  </li>
+                  <li class="post-copyright-license">
+                    <strong>版权声明： </strong>
+                    本博客所有文章除特别声明外,转载请注明出处！
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>
