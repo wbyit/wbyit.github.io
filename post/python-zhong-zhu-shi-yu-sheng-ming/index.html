@@ -35,11 +35,10 @@
           </p>
           <div class="toc-container hidden lg:block">
             <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
-</ul>
-</li>
+<li><a href="#python%E4%B8%AD%E6%B3%A8%E9%87%8A%E7%9A%84%E5%86%99%E6%B3%95">Python中注释的写法</a></li>
+<li><a href="#%E6%96%87%E6%A1%A3%E5%AD%97%E7%AC%A6%E4%B8%B2">文档字符串</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E8%A7%A3%E9%87%8A%E5%99%A8"><code>#!</code> 指定解释器</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E7%BC%96%E7%A0%81">指定编码</a></li>
 </ul>
 
           </div>
@@ -86,39 +85,85 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Hello Gridea</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">Python中注释与声明</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2018-12-12 / 2 min read
+          2019-12-31 / 3 min read
         </div>
         
         <div class="post-content yue">
-          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+          <h1 id="python中注释的写法">Python中注释的写法</h1>
+<p><code>#</code>：使用井号进行单行注释</p>
+<p>Python中貌似没有提供多行注释，不过我们可以利用三引号的多行字符串来进行多行注释</p>
+<pre><code>&quot;&quot;&quot;
+多行注释内容
+多行注释内容
+......
+&quot;&quot;&quot;
+
+或者
+
+'''
+多行注释内容
+多行注释内容
+......
+'''
+</code></pre>
+<h1 id="文档字符串">文档字符串</h1>
+<p>在定义函数或类的时候，在缩进之后的第一行使用三引号注释，就是文档字符串</p>
+<p>可以使用 <code>__doc__</code> 在之后查看这段字符串</p>
+<pre><code class="language-python">def a():
+    '''这是文档字符串'''
+    pass
+print(a.__doc__)
+</code></pre>
+<h1 id="指定解释器"><code>#!</code> 指定解释器</h1>
+<pre><code>#! /usr/bin/env python3
+</code></pre>
+<h1 id="指定编码">指定编码</h1>
+<p>带等于号的</p>
+<pre><code># coding=&lt;encoding name&gt;
+</code></pre>
+<p>最常见的，带冒号的（大多数编辑器都可以正确识别的）</p>
+<pre><code>#!/usr/bin/python
+# -*- coding: &lt;encoding name&gt; -*-
+</code></pre>
+<p>vim的：</p>
+<pre><code>#!/usr/bin/python
+# vim: set fileencoding=&lt;encoding name&gt; :
+</code></pre>
+<p>精确表达：</p>
+<pre><code>更加精确的解释是：
+
+    符合正则表达式：&quot;^[ \t\v]*#.*?coding[:=][ \t]*([-_.a-zA-Z0-9]+)&quot; 就可以;
+
+   关于正则表达式的理解：
+
+   1.&quot;^&quot;表示开始；
+
+   2.&quot;[ \t\v]&quot;表示匹配制表符\t和垂直制表符\v，*表示匹配0次或者多次,则[ \t\v]*合起来理解就是匹配0次或者多次\t\v;
+
+   3.&quot;#&quot;匹配#字符，即对应标题的#字符；
+
+   4.&quot;.*&quot;表示接下来匹配任意字符,&quot;.*?&quot;表示以非贪心算法匹配任意字符，对应标题中的“ -*- ”；
+
+   5.&quot;coding&quot;对应标题中的coding；
+
+   6.&quot;[:=]&quot;表示接下来的字符是&quot;:&quot;或者&quot;=&quot;出现的任意多个字符，对应标题中的&quot;:&quot;;
+
+   7.[ \t]*表示接下来匹配0次或者多次\t；标题中表示使用了0次；
+
+   8.[-_.a-zA-Z0-9]表示匹配出现'_'字符、小写字母'a至z'、大小字母'A至Z'、数字‘0至9’的任意多的字符，对应标题中的utf-8
+
+   9.接下来标题中的&quot; -*- &quot;则这个官方表达式没有给出解释，因此这个正则表达式应该是不完整的，我觉得完整的正则表达式可以为：
+
+     &quot;^[ \t\v]*#.*?coding[:=][ \t]*([-_.a-zA-Z0-9]+).*$&quot;
+</code></pre>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://wbyit.github.io/tag/jCGU3sOig">
-            <span class="flex-auto">Gridea</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://wbyit.github.io/tag/S3rzKJH6Y">
+            <span class="flex-auto">Python</span>
           </a>
         
 
@@ -126,6 +171,15 @@
         <div class="flex justify-between py-8">
           
 
+          
+            <div class="next-post">
+              <a href="https://wbyit.github.io/post/test">
+                <h3 class="post-title">
+                  test
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 

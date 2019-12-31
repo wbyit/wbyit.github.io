@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wbyit.github.io</id>
     <title>Wby</title>
-    <updated>2019-12-16T06:20:48.293Z</updated>
+    <updated>2019-12-31T06:13:04.268Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wbyit.github.io"/>
     <link rel="self" href="https://wbyit.github.io/atom.xml"/>
     <logo>https://wbyit.github.io/images/avatar.png</logo>
     <icon>https://wbyit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Wby</rights>
+    <entry>
+        <title type="html"><![CDATA[Python中注释与声明]]></title>
+        <id>https://wbyit.github.io/post/python-zhong-zhu-shi-yu-sheng-ming</id>
+        <link href="https://wbyit.github.io/post/python-zhong-zhu-shi-yu-sheng-ming">
+        </link>
+        <updated>2019-12-31T06:11:58.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>https://wbyit.github.io/post/test</id>
