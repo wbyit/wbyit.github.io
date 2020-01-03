@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Python中注释与声明 | Wby</title>
+<title>我的观影 | Wby</title>
 <meta name="description" content="" />
 <link rel="shortcut icon" href="https://wbytts.github.io/favicon.ico">
 <link rel="stylesheet" href="https://wbytts.github.io/styles/main.css">
@@ -13,11 +13,14 @@
 <script src="https://wbytts.github.io/media/js/pace.min.js"></script>
 <script src="https://wbytts.github.io/media/js/view-image.min.js"></script>
 <script src="https://wbytts.github.io/media/js/functions.js"></script>
-    <script src="https://wbytts.github.io/media/js/waterfall.min.js"></script>
-    <script src="https://wbytts.github.io/media/js/prism.min.js"></script>
-    
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="https://wbytts.github.io/media/js/Bmdb.min.css">
+    <script type='text/javascript' src='https://wbytts.github.io/media/js/Bmdb.min.js'></script>
   </head>
   <body>
+    <!-- start: #wrapper -->
+    <div class="wrapper">
+      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -72,141 +75,14 @@
         <div class="clear"></div>
       </header>
 
-      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
-
-        <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://wbytts.github.io/media/images/S3rzKJH6Y.jpg');">
-            <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2019-12-31"><i class="fa fa-calendar"></i><span class="lately">3 天前</span></time>
-               
-               
-            </div>
-            <div class="info">
-              <div class="tags ">
-                
-                      <a href="https://wbytts.github.io/tag/S3rzKJH6Y" class="ctag ctag-0 ctag-S3rzKJH6Y" aria-label="">Python</a>
-                    
-              </div>
-              <h1 class="title ularge white bold">Python中注释与声明</h1>
-            </div>
-          </div>
-        </div>  
-
+      <main id="friends" class="main fullcover no-sidebar content">
+        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
         <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile">
-            <article class="main-article post">
-              <section class="post-content">
-                <div class="text">
-                  <h1 id="python中注释的写法">Python中注释的写法</h1>
-<p><code>#</code>：使用井号进行单行注释</p>
-<p>Python中貌似没有提供多行注释，不过我们可以利用三引号的多行字符串来进行多行注释</p>
-<pre><code>&quot;&quot;&quot;
-多行注释内容
-多行注释内容
-......
-&quot;&quot;&quot;
-
-或者
-
-'''
-多行注释内容
-多行注释内容
-......
-'''
-</code></pre>
-<h1 id="文档字符串">文档字符串</h1>
-<p>在定义函数或类的时候，在缩进之后的第一行使用三引号注释，就是文档字符串</p>
-<p>可以使用 <code>__doc__</code> 在之后查看这段字符串</p>
-<pre><code class="language-python">def a():
-    '''这是文档字符串'''
-    pass
-print(a.__doc__)
-</code></pre>
-<h1 id="指定解释器"><code>#!</code> 指定解释器</h1>
-<pre><code>#! /usr/bin/env python3
-</code></pre>
-<h1 id="指定编码">指定编码</h1>
-<p>带等于号的</p>
-<pre><code># coding=&lt;encoding name&gt;
-</code></pre>
-<p>最常见的，带冒号的（大多数编辑器都可以正确识别的）</p>
-<pre><code>#!/usr/bin/python
-# -*- coding: &lt;encoding name&gt; -*-
-</code></pre>
-<p>vim的：</p>
-<pre><code>#!/usr/bin/python
-# vim: set fileencoding=&lt;encoding name&gt; :
-</code></pre>
-<p>精确表达：</p>
-<pre><code>更加精确的解释是：
-
-    符合正则表达式：&quot;^[ \t\v]*#.*?coding[:=][ \t]*([-_.a-zA-Z0-9]+)&quot; 就可以;
-
-   关于正则表达式的理解：
-
-   1.&quot;^&quot;表示开始；
-
-   2.&quot;[ \t\v]&quot;表示匹配制表符\t和垂直制表符\v，*表示匹配0次或者多次,则[ \t\v]*合起来理解就是匹配0次或者多次\t\v;
-
-   3.&quot;#&quot;匹配#字符，即对应标题的#字符；
-
-   4.&quot;.*&quot;表示接下来匹配任意字符,&quot;.*?&quot;表示以非贪心算法匹配任意字符，对应标题中的“ -*- ”；
-
-   5.&quot;coding&quot;对应标题中的coding；
-
-   6.&quot;[:=]&quot;表示接下来的字符是&quot;:&quot;或者&quot;=&quot;出现的任意多个字符，对应标题中的&quot;:&quot;;
-
-   7.[ \t]*表示接下来匹配0次或者多次\t；标题中表示使用了0次；
-
-   8.[-_.a-zA-Z0-9]表示匹配出现'_'字符、小写字母'a至z'、大小字母'A至Z'、数字‘0至9’的任意多的字符，对应标题中的utf-8
-
-   9.接下来标题中的&quot; -*- &quot;则这个官方表达式没有给出解释，因此这个正则表达式应该是不完整的，我觉得完整的正则表达式可以为：
-
-     &quot;^[ \t\v]*#.*?coding[:=][ \t]*([-_.a-zA-Z0-9]+).*$&quot;
-</code></pre>
-
-                </div>
-                <div class="clear"></div>
-              </section>
-            </article>
-            <div class="clear"></div>
-
-            <section class="related section">
-              
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://wbytts.github.io/media/images/T8gMmz6ir.jpg');"></div>
-                 <a href="https://wbytts.github.io/post/django~gai-shu" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2019-12-31">2019-12-31</time>
-                  <h4 class="title white no-margin">Django~概述</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://wbytts.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
-              
-
-                <div class="clear"></div>
-            </section>
-
-              <div class="clear"></div>
-
-              <div id="comments" class="bg-white hosted ">
-
-              
-                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
-              
-                <div class="clear"></div>
-              </div>
-
-              <div class="clear"></div>
-            </div>
-          </div>
+          <div class="section-content" style="margin-top:3em;"></div>
+        </div>
+        </div>
       </main>
-
-          <footer id="footer" class="grid-container">
+        <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -323,50 +199,15 @@ print(a.__doc__)
         </a>
     </footer>
     <div class="clear"></div>
-
-      <script type="text/javascript">
-       jQuery(document).ready(function($){
-          $("photos img").each(function(){
-              var _a = $("<a></a>").attr("href",this.src);
-              $(this).wrap("<div class='photo'></div>").wrap(_a);
-          })
-          $("figure img").each(function(){
-              var _b = $("<a></a>").attr("href",this.src);
-              $(this).wrap(_b);
-          })
-          isImgLoad(function(){
-            var photos = document.querySelector('photos');
-            if(photos){
-              waterfall(photos);
-            }
-            $(window).resize(function() {
-             if(photos){
-                  waterfall(photos);
-            }
-          });
-        });
-        var t_img;
-        var isLoad = true;
-        function isImgLoad(callback){
-          $('photos img').each(function(){
-            if(this.height === 0){
-              isLoad = false;
-              return false;
-            }
-          });
-          if(isLoad){
-            clearTimeout(t_img);
-            callback();
-          }else{
-            isLoad = true;
-            t_img = setTimeout(function(){
-              isImgLoad(callback);
-            },500);
-          }
-        }
-      });
-      </script>
-
+    <script>
+    new Bmdb({
+      type: 'movies',
+      selector: '.section-content',
+      secret: '0bba46738324c778ad2da662837c14d2c1e5bceb22e3729febc9fd3677bdcea5',
+      noMoreText: '没有更多数据了',
+      limit: 30
+    })
+    </script>
     </div>
     <!-- end: #wrapper -->
   </body>
