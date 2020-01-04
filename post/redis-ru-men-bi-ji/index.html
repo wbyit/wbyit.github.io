@@ -2,19 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Python中注释与声明 | Wby</title>
+<title>Redis入门笔记 | Wby</title>
 <meta name="description" content="" />
-<link rel="shortcut icon" href="https://wbytts.github.io/favicon.ico">
-<link rel="stylesheet" href="https://wbytts.github.io/styles/main.css">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
 
-<script src="https://wbytts.github.io/media/js/jquery.min.js"></script>
-<script src="https://wbytts.github.io/media/js/masonry.pkgd.min.js"></script>
-<script src="https://wbytts.github.io/media/js/aos.js"></script>
-<script src="https://wbytts.github.io/media/js/pace.min.js"></script>
-<script src="https://wbytts.github.io/media/js/view-image.min.js"></script>
-<script src="https://wbytts.github.io/media/js/functions.js"></script>
-    <script src="https://wbytts.github.io/media/js/waterfall.min.js"></script>
-    <script src="https://wbytts.github.io/media/js/prism.min.js"></script>
+<script src="http://localhost:4000/media/js/jquery.min.js"></script>
+<script src="http://localhost:4000/media/js/masonry.pkgd.min.js"></script>
+<script src="http://localhost:4000/media/js/aos.js"></script>
+<script src="http://localhost:4000/media/js/pace.min.js"></script>
+<script src="http://localhost:4000/media/js/view-image.min.js"></script>
+<script src="http://localhost:4000/media/js/functions.js"></script>
+    <script src="http://localhost:4000/media/js/waterfall.min.js"></script>
+    <script src="http://localhost:4000/media/js/prism.min.js"></script>
     
   </head>
   <body>
@@ -26,14 +26,14 @@
         <div class="menu-wrapper">
           <div class="">
             <div class="logo">
-              <a href="https://wbytts.github.io"><img src="https://wbytts.github.io/media/images/logoo.png" alt=""></a>
+              <a href="http://localhost:4000"><img src="http://localhost:4000/media/images/logoo.png" alt=""></a>
             </div>
             <!-- start: .main-nav -->
 
             <nav class="main-nav grid-container grid-parent">
               <ul id="menu-header" class="menu gradient-effect">
                 
-                  <li class=""><a href="https://wbytts.github.io" class="menu">首页</a></li>
+                  <li class=""><a href="http://localhost:4000" class="menu">首页</a></li>
                 
                 
                   <li class="" >
@@ -75,19 +75,19 @@
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://wbytts.github.io/media/images/S3rzKJH6Y.jpg');">
+          <div class="featured-image cover" style="background-image: url('http://localhost:4000/media/images/so2nXAwK5.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2019-12-31"><i class="fa fa-calendar"></i><span class="lately">3 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-01-03"><i class="fa fa-calendar"></i><span class="lately">1 天前</span></time>
                
                
             </div>
             <div class="info">
               <div class="tags ">
                 
-                      <a href="https://wbytts.github.io/tag/S3rzKJH6Y" class="ctag ctag-0 ctag-S3rzKJH6Y" aria-label="">Python</a>
+                      <a href="http://localhost:4000/tag/so2nXAwK5" class="ctag ctag-0 ctag-so2nXAwK5" aria-label="">Redis</a>
                     
               </div>
-              <h1 class="title ularge white bold">Python中注释与声明</h1>
+              <h1 class="title ularge white bold">Redis入门笔记</h1>
             </div>
           </div>
         </div>  
@@ -97,73 +97,121 @@
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <h1 id="python中注释的写法">Python中注释的写法</h1>
-<p><code>#</code>：使用井号进行单行注释</p>
-<p>Python中貌似没有提供多行注释，不过我们可以利用三引号的多行字符串来进行多行注释</p>
-<pre><code>&quot;&quot;&quot;
-多行注释内容
-多行注释内容
-......
-&quot;&quot;&quot;
-
-或者
-
-'''
-多行注释内容
-多行注释内容
-......
-'''
+                  <h1 id="什么是redis">什么是Redis</h1>
+<h2 id="什么是nosql">什么是NoSQL</h2>
+<p>介绍Redis之前，先了解下NoSQL （Not noly SQL）不仅仅是SQL</p>
+<p>属于非关系型数据库；Redis就属于非关系型数据库</p>
+<p>传统的Mysql ,oracle ,sql server 等 都是关系型数据库</p>
+<p>为什么需要NoSQL，主要应对以下问题，传统关系型数据库力不从心</p>
+<ul>
+<li>High performance -高并发读写</li>
+<li>Huge Storage-海量数据的高效率存储和访问</li>
+<li>High Scalablility &amp;&amp; High Availability 高可扩展性和高可用性</li>
+</ul>
+<h2 id="nosql的特点">NoSQL的特点</h2>
+<p>易扩展<br>
+灵活的数据模型<br>
+大数据量，高性能<br>
+高可用</p>
+<p>高性能键值对数据库，支持的键值数据类型</p>
+<ul>
+<li>字符串类型</li>
+<li>列表类型</li>
+<li>有序集合类型</li>
+<li>散列类型</li>
+<li>集合类型</li>
+</ul>
+<h2 id="redis的应用场景">Redis的应用场景</h2>
+<ul>
+<li>缓存</li>
+<li>任务队列</li>
+<li>网站访问统计</li>
+<li>数据过期处理</li>
+<li>应用排行榜</li>
+<li>分布式集群架构中的session分离</li>
+</ul>
+<h1 id="安装redis">安装Redis</h1>
+<h2 id="第一步安装gcc">第一步：安装gcc</h2>
+<p>gcc是用来编译c语言的，因为redis源码是c写的，所以需要gcc</p>
+<pre><code class="language-bash">yum install gcc-c++
 </code></pre>
-<h1 id="文档字符串">文档字符串</h1>
-<p>在定义函数或类的时候，在缩进之后的第一行使用三引号注释，就是文档字符串</p>
-<p>可以使用 <code>__doc__</code> 在之后查看这段字符串</p>
-<pre><code class="language-python">def a():
-    '''这是文档字符串'''
-    pass
-print(a.__doc__)
+<h2 id="第二步wget方式下载redis压缩包并解压以及编译">第二步：wget方式，下载redis压缩包，并解压以及编译</h2>
+<p>下载：</p>
+<pre><code class="language-bash">wget http://download.redis.io/releases/redis-3.2.9.tar.gz
 </code></pre>
-<h1 id="指定解释器"><code>#!</code> 指定解释器</h1>
-<pre><code>#! /usr/bin/env python3
+<p>解压：</p>
+<pre><code class="language-bash">tar -zxvf redis-3.2.9.tar.gz
 </code></pre>
-<h1 id="指定编码">指定编码</h1>
-<p>带等于号的</p>
-<pre><code># coding=&lt;encoding name&gt;
+<p>进入解压后的目录：</p>
+<pre><code class="language-bash">make
 </code></pre>
-<p>最常见的，带冒号的（大多数编辑器都可以正确识别的）</p>
-<pre><code>#!/usr/bin/python
-# -*- coding: &lt;encoding name&gt; -*-
+<h2 id="第三步安装redis">第三步：安装redis</h2>
+<pre><code class="language-bash">make PREFIX=/usr/local/redis install
 </code></pre>
-<p>vim的：</p>
-<pre><code>#!/usr/bin/python
-# vim: set fileencoding=&lt;encoding name&gt; :
-</code></pre>
-<p>精确表达：</p>
-<pre><code>更加精确的解释是：
-
-    符合正则表达式：&quot;^[ \t\v]*#.*?coding[:=][ \t]*([-_.a-zA-Z0-9]+)&quot; 就可以;
-
-   关于正则表达式的理解：
-
-   1.&quot;^&quot;表示开始；
-
-   2.&quot;[ \t\v]&quot;表示匹配制表符\t和垂直制表符\v，*表示匹配0次或者多次,则[ \t\v]*合起来理解就是匹配0次或者多次\t\v;
-
-   3.&quot;#&quot;匹配#字符，即对应标题的#字符；
-
-   4.&quot;.*&quot;表示接下来匹配任意字符,&quot;.*?&quot;表示以非贪心算法匹配任意字符，对应标题中的“ -*- ”；
-
-   5.&quot;coding&quot;对应标题中的coding；
-
-   6.&quot;[:=]&quot;表示接下来的字符是&quot;:&quot;或者&quot;=&quot;出现的任意多个字符，对应标题中的&quot;:&quot;;
-
-   7.[ \t]*表示接下来匹配0次或者多次\t；标题中表示使用了0次；
-
-   8.[-_.a-zA-Z0-9]表示匹配出现'_'字符、小写字母'a至z'、大小字母'A至Z'、数字‘0至9’的任意多的字符，对应标题中的utf-8
-
-   9.接下来标题中的&quot; -*- &quot;则这个官方表达式没有给出解释，因此这个正则表达式应该是不完整的，我觉得完整的正则表达式可以为：
-
-     &quot;^[ \t\v]*#.*?coding[:=][ \t]*([-_.a-zA-Z0-9]+).*$&quot;
-</code></pre>
+<p>安装到/usr/local/redis</p>
+<h2 id="第四步启动和关闭redis服务">第四步：启动和关闭redis服务</h2>
+<p>启动：redis里的redis-server命令<br>
+结束：Ctrl + C<br>
+或者：<code>./bin/redis-cli shutdown</code></p>
+<p>验证：<code>ps -ef | grep -i redis</code></p>
+<h1 id="redis的基本使用">Redis的基本使用</h1>
+<p><code>./bin/redis-cli</code>，进入客户端</p>
+<p>字符串类型：</p>
+<ul>
+<li>存储：set key value</li>
+<li>获取：get key
+<ul>
+<li>无值返回nil</li>
+</ul>
+</li>
+<li>删除：del key</li>
+</ul>
+<p>哈希类型 hash：</p>
+<ul>
+<li>存储：hset key field value</li>
+<li>获取：
+<ul>
+<li>获取指定field：hget key field</li>
+<li>获取全部field：hgetall key</li>
+</ul>
+</li>
+<li>删除：hdel key field</li>
+</ul>
+<p>列表类型：可以添加一个元素到列表的头部或者尾部</p>
+<ul>
+<li>存储：
+<ul>
+<li>将元素添加到列表左边：lpush key value1, value2, ......</li>
+<li>将元素添加到列表右边：rpush key value1, value2, ......<br>
+获取：</li>
+</ul>
+</li>
+<li>范围获取：lrange key start end（获取所有可以写start是0，end是-1）<br>
+删除：</li>
+<li>lpop：从左边弹出一个元素（删除最左边元素并返回）</li>
+<li>rpop：从右边弹出一个元素</li>
+</ul>
+<p>集合类型：<br>
+存储：sadd key value<br>
+获取：smembers key：获取set集合中所有元素<br>
+删除：srem key value：删除set集合中的某个元素</p>
+<p>有序集合类型：不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。有序集合的成员是唯一的，但分数（score）却可以重复<br>
+集合是通过哈希表实现的，所以添加、删除、查找的复杂度都是O(1)。</p>
+<ul>
+<li>存储：zadd key score value</li>
+<li>获取：
+<ul>
+<li>获取所有：zrange key start end</li>
+</ul>
+</li>
+<li>删除：zrem key value</li>
+</ul>
+<p>通用命令：</p>
+<ul>
+<li>查询所有的键：keys *  (*处其实可以添加正则表达式)</li>
+<li>获得value类型：type key</li>
+<li>删除指定key的value：del key</li>
+</ul>
 
                 </div>
                 <div class="clear"></div>
@@ -174,14 +222,14 @@ print(a.__doc__)
             <section class="related section">
               
               <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://wbytts.github.io/media/images/T8gMmz6ir.jpg');"></div>
-                 <a href="https://wbytts.github.io/post/django~gai-shu" class="full-link"></a>
+                <div class="thumb cover lazy loaded" style="background-image: url('http://localhost:4000/media/images/ogLTkSsOC.jpg');"></div>
+                 <a href="http://localhost:4000/post/springboot-gai-yao" class="full-link"></a>
                  <div class="info">
-                  <time datetime="2019-12-31">2019-12-31</time>
-                  <h4 class="title white no-margin">Django~概述</h4>
+                  <time datetime="2020-01-05">2020-01-05</time>
+                  <h4 class="title white no-margin">SpringBoot概要</h4>
                 </div>
                  <span class="epcl-button red">
-                  <img src="https://wbytts.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                  <img src="http://localhost:4000/media/images/left-arrow.svg" width="15" alt="Left Arrow">
                 </span>
                 <div class="overlay"></div>
               </article>
@@ -215,13 +263,13 @@ print(a.__doc__)
                   
                   
                   <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://wbytts.github.io/post/django~gai-shu" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display: block;background-image: url('https://wbytts.github.io/media/images/T8gMmz6ir.jpg');"></span>
+                    <a href="http://localhost:4000/post/springboot-gai-yao" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display: block;background-image: url('http://localhost:4000/media/images/ogLTkSsOC.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
-                      <time datetime="2019-12-31">2019-12-31</time>
+                      <time datetime="2020-01-05">2020-01-05</time>
                       <h4 class="title usmall">
-                        <a href="https://wbytts.github.io/post/django~gai-shu">Django~概述</a>
+                        <a href="http://localhost:4000/post/springboot-gai-yao">SpringBoot概要</a>
                       </h4>
                     </div>
                     <div class="clear"></div>
@@ -230,13 +278,13 @@ print(a.__doc__)
                   
                   
                   <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://wbytts.github.io/post/python-zhong-zhu-shi-yu-sheng-ming" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display: block;background-image: url('https://wbytts.github.io/media/images/S3rzKJH6Y.jpg');"></span>
+                    <a href="http://localhost:4000/post/redis-ru-men-bi-ji" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display: block;background-image: url('http://localhost:4000/media/images/so2nXAwK5.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
-                      <time datetime="2019-12-31">2019-12-31</time>
+                      <time datetime="2020-01-03">2020-01-03</time>
                       <h4 class="title usmall">
-                        <a href="https://wbytts.github.io/post/python-zhong-zhu-shi-yu-sheng-ming">Python中注释与声明</a>
+                        <a href="http://localhost:4000/post/redis-ru-men-bi-ji">Redis入门笔记</a>
                       </h4>
                     </div>
                     <div class="clear"></div>
@@ -245,13 +293,13 @@ print(a.__doc__)
                   
                   
                   <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://wbytts.github.io/post/about" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display: block;background-image: url('https://wbytts.github.io/media/images/gridea.jpg');"></span>
+                    <a href="http://localhost:4000/post/about" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display: block;background-image: url('http://localhost:4000/media/images/gridea.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
                       <time datetime="2019-01-25">2019-01-25</time>
                       <h4 class="title usmall">
-                        <a href="https://wbytts.github.io/post/about">关于</a>
+                        <a href="http://localhost:4000/post/about">关于</a>
                       </h4>
                     </div>
                     <div class="clear"></div>
@@ -269,9 +317,9 @@ print(a.__doc__)
                   <h4 class="widget-title title white bordered">标签云</h4>
                   <div class="tagcloud">
                     
-                      <a href="https://wbytts.github.io/tag/T8gMmz6ir" class="ctag ctag-0 ctag-T8gMmz6ir" aria-label="">Django</a>
+                      <a href="http://localhost:4000/tag/ogLTkSsOC" class="ctag ctag-0 ctag-ogLTkSsOC" aria-label="">SpringBoot</a>
                     
-                      <a href="https://wbytts.github.io/tag/S3rzKJH6Y" class="ctag ctag-1 ctag-S3rzKJH6Y" aria-label="">Python</a>
+                      <a href="http://localhost:4000/tag/so2nXAwK5" class="ctag ctag-1 ctag-so2nXAwK5" aria-label="">Redis</a>
                     
                   </div>
                   <div class="clear"></div>
@@ -282,7 +330,7 @@ print(a.__doc__)
                 <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
                   <h4 class="widget-title title white bordered">关于我</h4>
                   <div class="avatar">
-                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://wbytts.github.io/images/avatar.png);"></span></a>
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(http://localhost:4000/images/avatar.png);"></span></a>
                   </div>
                   <div class="info">
                     <h4 class="title small author-name gradient-effect no-margin"><a href="">Wby</a></h4>
@@ -310,7 +358,7 @@ print(a.__doc__)
         </div>
 
         <div class="logo">
-          <a href="https://wbytts.github.io"><img class="" src="https://wbytts.github.io/media/images/logo.png" alt=""></a>
+          <a href="http://localhost:4000"><img class="" src="http://localhost:4000/media/images/logo.png" alt=""></a>
         </div>
         <p class="published border-effect">
           ©2019 共 4 篇文章
