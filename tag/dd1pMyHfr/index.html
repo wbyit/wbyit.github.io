@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SpringBoot 介绍 | Wby</title>
+<title>机器学习 | Wby</title>
 <meta name="description" content="" />
 <link rel="shortcut icon" href="https://wbytts.github.io/favicon.ico">
 <link rel="stylesheet" href="https://wbytts.github.io/styles/main.css">
@@ -13,11 +13,11 @@
 <script src="https://wbytts.github.io/media/js/pace.min.js"></script>
 <script src="https://wbytts.github.io/media/js/view-image.min.js"></script>
 <script src="https://wbytts.github.io/media/js/functions.js"></script>
-    <script src="https://wbytts.github.io/media/js/waterfall.min.js"></script>
-    <script src="https://wbytts.github.io/media/js/prism.min.js"></script>
-    
   </head>
   <body>
+    <!-- start: #wrapper -->
+    <div class="wrapper">
+      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -84,112 +84,45 @@
         <div class="clear"></div>
       </header>
 
-      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
-
-        <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://wbytts.github.io/media/images/ogLTkSsOC.jpg');">
-            <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-01-05"><i class="fa fa-calendar"></i><span class="lately">14 天前</span></time>
-               
-               
-            </div>
-            <div class="info">
-              <div class="tags ">
-                
-                      <a href="https://wbytts.github.io/tag/ogLTkSsOC" class="ctag ctag-0 ctag-ogLTkSsOC" aria-label="">SpringBoot</a>
-                    
-              </div>
-              <h1 class="title ularge white bold">SpringBoot 介绍</h1>
-            </div>
-          </div>
-        </div>  
-
+      <main id="home" class="main fullcover no-sidebar content">
+        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
         <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile">
-            <article class="main-article post">
-              <section class="post-content">
-                <div class="text">
-                  <h1 id="spring-boot-介绍">Spring Boot 介绍</h1>
-<p>多年年以来， Spring 平台饱受⾮非议的⼀一点就是⼤大量量的 XML 配置以及复杂的依赖管理理</p>
-<p>随着使⽤用 Spring 进⾏行行开发的个⼈人和企业越来越多， Spring 也慢慢从⼀一个单⼀一简洁的⼩小框架变成⼀一个⼤大⽽而全的开源软件， Spring 的边界不不断的进⾏行行扩充，到了了后来 Spring 几乎可以做任何事情了，市⾯面上主流的开源软件、中间件都有 Spring 对应组件⽀支持，人们在享用 Spring 的便利之后，也遇到了一些问题</p>
-<p>Spring 每集成⼀个开源软件，就需要增加一些基础配置，慢慢的随着⼈们开发的项⽬越来越庞大，往需要<br>
-集成很多开源软件，后期使用 Spring 开发⼤大型项目需要引入很多配置文件，太多的配置非常难以理解，并容易配置出错，到了了后来⼈们甚⾄至称 Spring 为配置地狱</p>
-<p>2013 年年，微服务的概念也慢慢兴起，快速开发微⼩独⽴的应用变得更为急迫， Spring 刚好处在这么⼀一个交叉点上，于 2013 年年初开始的 Spring Boot 项目的研发， 2014 年， Spring Boot 伴随着 Spring 4.0 诞⽣生发布了第⼀个正式版本</p>
-<p>Spring Boot 并不是要成为 Spring 平台⾥⾯众多“Foundation”层项目的替代者。 Spring Boot的⽬标不在于为已解决的问题域提供新的解决方案，而是为平台带来另一种开发体验，从而简化对这些已有技术的使用。对于已经熟悉 Spring 生态系统的开发人员来说， Spring Boot 是一个很理想的选择；对于采用 Spring 技术的新人来说， Spring Boot 提供一种更简洁的方式来使用这些技术</p>
-<ul>
-<li>随着动态语言的流行，java的开发显得格外的笨重；繁多的配置、低下的开发效率，负责的部署流程以及第三方技术整合难度大。</li>
-<li>在上述环境下，Spring Boot由此诞生，它的设计是为了使您能够尽可能快地启动和运行。它使用“习惯优于配置”的理念让你的项目快速运行起来。使用Spring Boot很容易创建一个独立运行、准生产强力的基于Spring框架的项目，使用Spring Boot你可以不用或者只需要很少的Spring配置。</li>
-<li>提供了J2EE开发的一站式解决方案。</li>
-</ul>
-<h1 id="spring-boot-的优点">Spring Boot 的优点</h1>
-<ul>
-<li>快速构建独立运行的Spring项目；</li>
-<li>无须依赖外部Servlet容器，应用无需打成WAR包；项目可以打成jar包独自运行；</li>
-<li>提供 一系列 starter pom 来简化 Maven 的依赖加载；</li>
-<li>大量的自动配置，对主流开发框架的无配置集成；</li>
-<li>无须配置XML，开箱即用，简化开发，同时也可以修改默认值来满足特定的需求；</li>
-<li>Spring Boot 并不是对 Spring 功能上的增强，而是提供了一种快速使用 Spring 的方式；</li>
-<li>极大提高了开发、部署效率。</li>
-</ul>
-<h1 id="约定优于配置">约定优于配置</h1>
-<p>什么是约定优于配置呢？</p>
-<p>约定优于配置（Convention Over Configuration），也称作按约定编程</p>
+          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
+                
+            <!-- start: .articles -->
+            <div class="main-article post">
+  <h2 class="year"># 机器学习</h2>
+    
+      <article class="item default grid-33 tablet-grid-50 np-mobile">
+        <a href="https://wbytts.github.io/post/ji-qi-xue-xi-gai-shu" class="thumb hover-effect">
+          <span class="fullimage cover" style="display: block;background-image: url('https://wbytts.github.io/media/images/dd1pMyHfr.jpg');"></span>
+        </a>
+        <div class="info gradient-effect">
+          <time datetime="2020-01-18">2020-01-18</time>
+          <h4 class="title usmall">
+            <a href="https://wbytts.github.io/post/ji-qi-xue-xi-gai-shu">机器学习概述</a>
+          </h4>
+        </div>
+      </article>
 
-                </div>
-                <div class="clear"></div>
-              </section>
-            </article>
-            <div class="clear"></div>
-
-            <section class="related section">
-              
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://wbytts.github.io/media/images/Qg5foG29s.jpg');"></div>
-                 <a href="https://wbytts.github.io/post/maven-chang-yong-quan-ju-pei-zhi" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2020-01-05">2020-01-05</time>
-                  <h4 class="title white no-margin">Maven 常用全局配置</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://wbytts.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
-              
-              <article class="next grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://wbytts.github.io/media/images/so2nXAwK5.jpg');"></div>
-                 <a href="https://wbytts.github.io/post/redis-ru-men-bi-ji" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2020-01-03">2020-01-03</time>
-                  <h4 class="title white no-margin">Redis入门笔记</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://wbytts.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
-
-                <div class="clear"></div>
-            </section>
-
-              <div class="clear"></div>
-
-              <div id="comments" class="bg-white hosted ">
-
-              
-                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
-              
-                <div class="clear"></div>
+    
+    <div class="clear"></div>
+</div>
+            <!-- end: .articles -->
+            
+                        <div class="epcl-pagination section">
+              <div class="nav">
+                
+                
               </div>
-
-              <div class="clear"></div>
             </div>
+            
           </div>
+          </div>
+        </div>
       </main>
 
-          <footer id="footer" class="grid-container">
+        <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -314,50 +247,6 @@
         </a>
     </footer>
     <div class="clear"></div>
-
-      <script type="text/javascript">
-       jQuery(document).ready(function($){
-          $("photos img").each(function(){
-              var _a = $("<a></a>").attr("href",this.src);
-              $(this).wrap("<div class='photo'></div>").wrap(_a);
-          })
-          $("figure img").each(function(){
-              var _b = $("<a></a>").attr("href",this.src);
-              $(this).wrap(_b);
-          })
-          isImgLoad(function(){
-            var photos = document.querySelector('photos');
-            if(photos){
-              waterfall(photos);
-            }
-            $(window).resize(function() {
-             if(photos){
-                  waterfall(photos);
-            }
-          });
-        });
-        var t_img;
-        var isLoad = true;
-        function isImgLoad(callback){
-          $('photos img').each(function(){
-            if(this.height === 0){
-              isLoad = false;
-              return false;
-            }
-          });
-          if(isLoad){
-            clearTimeout(t_img);
-            callback();
-          }else{
-            isLoad = true;
-            t_img = setTimeout(function(){
-              isImgLoad(callback);
-            },500);
-          }
-        }
-      });
-      </script>
-
     </div>
     <!-- end: #wrapper -->
   </body>
